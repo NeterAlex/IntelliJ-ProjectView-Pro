@@ -11,7 +11,7 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.search.GlobalSearchScope
 import kotlin.io.path.relativeToOrNull
 
-class SearchScope(
+class PluginSearchScope(
     project: Project,
     private val pattern: String,
     private val settings: SettingService = project.service<SettingService>()
