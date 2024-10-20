@@ -4,6 +4,7 @@ import com.github.neteralex.intellijprojectviewpro.PluginBundle.message
 import com.github.neteralex.intellijprojectviewpro.model.CompressRule
 import com.github.neteralex.intellijprojectviewpro.utils.bindColor
 import com.github.neteralex.intellijprojectviewpro.utils.bindColorControl
+import com.github.neteralex.intellijprojectviewpro.utils.bindText
 import com.intellij.openapi.observable.properties.ObservableMutableProperty
 import com.intellij.openapi.observable.util.isNotNull
 import com.intellij.openapi.options.UiDslUnnamedConfigurable
@@ -15,7 +16,6 @@ import com.intellij.ui.components.fields.ExpandableTextField
 import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.Cell
 import com.intellij.ui.dsl.builder.Panel
-import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.selected
 import com.intellij.ui.layout.ComponentPredicate
 
