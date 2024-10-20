@@ -62,7 +62,7 @@ class CompressRuleTable(
         SwingUtilities.invokeLater({ tableView.selection = listOf(newElement) })
     }
 
-    override fun isEmpty(p0: CompressRule?) = p0?.pattern.isBlank()
+    override fun isEmpty(p0: CompressRule) = p0.pattern.isBlank()
     override fun cloneElement(p0: CompressRule?) = p0?.copy()
     override fun canDeleteElement(p0: CompressRule?) = true
 
