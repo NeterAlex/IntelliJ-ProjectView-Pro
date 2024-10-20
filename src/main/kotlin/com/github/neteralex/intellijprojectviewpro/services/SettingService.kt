@@ -1,16 +1,16 @@
 package com.github.neteralex.intellijprojectviewpro.services
 
 
-import com.github.neteralex.intellijprojectviewpro.constant.GlobalConstants
+import com.github.neteralex.intellijprojectviewpro.constant.PluginConstants
 import com.github.neteralex.intellijprojectviewpro.model.CompressRule
-import com.github.neteralex.intellijprojectviewpro.state.GlobalState
+import com.github.neteralex.intellijprojectviewpro.state.PluginState
 import com.intellij.openapi.components.*
 import com.intellij.util.xmlb.annotations.OptionTag
 import java.io.File
 
 @Service(Service.Level.PROJECT)
-@State(name = "ProjectViewProSettings", storages = [Storage(GlobalConstants.CONFIG_FILE_NAME)])
-class SettingService() : GlobalState, BaseState(), PersistentStateComponent<SettingService> {
+@State(name = "ProjectViewProSettings", storages = [Storage(PluginConstants.CONFIG_FILE_NAME)])
+class SettingService() : PluginState, BaseState(), PersistentStateComponent<SettingService> {
     @get:OptionTag("IS_COMPRESSING_ENABLED")
     override var isCompressingEnabled by property(true)
 

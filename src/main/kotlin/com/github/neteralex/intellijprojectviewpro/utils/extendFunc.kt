@@ -1,7 +1,7 @@
 package com.github.neteralex.intellijprojectviewpro.utils
 
 import com.github.neteralex.intellijprojectviewpro.model.CompressRule
-import com.github.neteralex.intellijprojectviewpro.state.GlobalState
+import com.github.neteralex.intellijprojectviewpro.state.PluginState
 import com.intellij.openapi.observable.properties.ObservableMutableProperty
 import com.intellij.openapi.observable.util.bind
 import com.intellij.openapi.observable.util.lockOrSkip
@@ -66,7 +66,7 @@ fun Cell<JBCheckBox>.bindColorControl(
         })
     }
 
-fun <T : GlobalState> Cell<JBCheckBox>.bindSelected(
+fun <T : PluginState> Cell<JBCheckBox>.bindSelected(
     graphProperty: ObservableMutableProperty<T>,
     property: KMutableProperty1<T, Boolean>
 ) =
@@ -88,7 +88,7 @@ fun <T : JTextComponent> Cell<T>.bindText(
         )
     })
 
-fun <T : GlobalState> ObservableMutableProperty<T>.createPredicate(property: KMutableProperty1<T, Boolean>) =
+fun <T : PluginState> ObservableMutableProperty<T>.createPredicate(property: KMutableProperty1<T, Boolean>) =
     object : ComponentPredicate() {
 
         private val observableProperty = transform(property)

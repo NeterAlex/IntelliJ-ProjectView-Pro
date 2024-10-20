@@ -1,7 +1,7 @@
 package com.github.neteralex.intellijprojectviewpro.ui.components
 
 import com.github.neteralex.intellijprojectviewpro.PluginBundle.message
-import com.github.neteralex.intellijprojectviewpro.constant.GlobalConstants
+import com.github.neteralex.intellijprojectviewpro.constant.PluginConstants
 import com.github.neteralex.intellijprojectviewpro.model.CompressRule
 import com.github.neteralex.intellijprojectviewpro.services.SettingService
 import com.intellij.execution.util.ListTableWithButtons
@@ -70,7 +70,7 @@ class CompressRuleTable(
 
         override fun getName() = ""
 
-        override fun valueOf(item: CompressRule?) = GlobalConstants.COLOR_PREVIEW_DEFAULT_TEXT
+        override fun valueOf(item: CompressRule?) = PluginConstants.COLOR_PREVIEW_DEFAULT_TEXT
 
         override fun getRenderer(item: CompressRule?) = object : DefaultTableCellRenderer() {
 
